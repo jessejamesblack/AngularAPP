@@ -1,26 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/Forms';
-
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { UserComponent } from './components/user/user.component';
-import { UsersComponent } from './components/users/users.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { LogFormComponent } from './components/log-form/log-form.component';
+import { LogsComponent } from './components/logs/logs.component';
+import { LogService } from './services/log.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent,
-    UsersComponent,
-    NavbarComponent
+    NavbarComponent,
+    LogFormComponent,
+    LogsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [LogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
